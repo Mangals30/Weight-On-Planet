@@ -1,0 +1,47 @@
+@media (max-width:800px) {
+  .input-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .display-grid {
+    padding: 1rem;
+  }
+}
+
+@media (max-width:750px) {
+
+  .planet-info h3 {
+    padding: 0.5rem;
+  }
+
+  .input-grid *:nth-child(1) {
+    grid-column: 1 /span 2;
+  }
+
+  .input-grid *:last-child {
+    grid-column: 1 /span 3;
+  }
+}
+
+@media (max-width:700px) {
+
+  .display-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .display-grid img {
+    width: 50%;
+  }
+}
+
+@media (max-width:600px) {
+
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .input-grid *:nth-child(1),
+  .input-grid *:last-child {
+    grid-column: 1;
+  }
+}
