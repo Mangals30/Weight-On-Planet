@@ -1,51 +1,42 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Solar System: Document Object Model:30 Days Of JavaScript</title>
-   <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System</title>
+  <link rel="shortcut icon" href="./images/solar.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mobile.css">
 </head>
-
 <body>
-    <div class="wrapper">
-    <header>
-        <h1 class="heading">Calculate a weight of an object on a planet</h1>
-        <input type="text" id="mass" placeholder="Mass in Kilogram" />
-        <select class="planets">
-            <option value='none'>--select planet-- </option>
-            <option value='Earth'>Earth</option>
-            <option value='Jupiter'>Jupiter</option>
-            <option value='Mars'>Mars</option>
-            <option value='Mercury'>Mercury</option>
-            <option value='Moon'>Moon</option>
-            <option value='Neptune'>Neptune</option>
-            <option value='Pluto'>Pluto</option>
-            <option value='Saturn'>Saturn</option>
-            <option value='Uranus'>Uranus</option>
-            <option value='Venus'>Venus</option>
-        </select>
-        <button class="calculate">Calculate weight</button>
-        
-    </header>
-    <main>
-        <div class="error"></div> 
-        <div class="flex-container">
-            <div class="flex-item-image">
-                <img src='./images/earth.png' class="planet-image" />
-            </div>
-            <div class="flex-item-description">
-                <div class="description">
-                The weight of the object on <span class="planet-weight">></span>
-                </div>
-            </div>
-
-        </div>
-
-
-    </main>
-</div>
-    <script src="./main.js"></script>
+  <div class="wrapper">
+    <h1>Calculate a weight of an object on a planet</h1>
+    <div class="input-grid">
+      <input type="text" name="mass" id="mass" placeholder="Mass in Kilogram">
+      <select name="planet" id="planet">
+        <option value="" disabled selected>--select a planet--</option>
+        <option value="earth">Earth</option>
+        <option value="moon">Moon</option>
+        <option value="mercury">Mercury</option>
+        <option value="venus">Venus</option>
+        <option value="mars">Mars</option>
+        <option value="jupiter">Jupiter</option>
+        <option value="saturn">Saturn</option>
+        <option value="uranus">Uranus</option>
+        <option value="pluto">Pluto</option>
+      </select>
+      <button class="btn">Calculate Weight</button>
+    </div>
+    <div class="display-grid">
+      <div class="error-message"></div>
+      <div class="planet-image"></div>
+      <div class="planet-info">
+      <div class="planet-weight"></div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/functions.js"></script>
+  <script src="./js/main.js"></script>
 </body>
-
 </html>
